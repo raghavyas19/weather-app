@@ -41,15 +41,9 @@ function App() {
     const saved = localStorage.getItem('darkMode');
     return saved ? JSON.parse(saved) : false;
   });
-  const [city, setCity] = useState('');
-  const [weather, setWeather] = useState<WeatherData | null>(() => {
-    const savedWeather = localStorage.getItem('weather');
-    return savedWeather ? JSON.parse(savedWeather) : null;
-  });
-  const [forecast, setForecast] = useState<ForecastData | null>(() => {
-    const savedForecast = localStorage.getItem('forecast');
-    return savedForecast ? JSON.parse(savedForecast) : null;
-  });
+  const [city, setCity] = useState(''); // No persistence for city
+  const [weather, setWeather] = useState<WeatherData | null>(null); // Initialize as null
+  const [forecast, setForecast] = useState<ForecastData | null>(null); // Initialize as null
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [recentSearches, setRecentSearches] = useState<string[]>(() => {
@@ -58,7 +52,6 @@ function App() {
   });
 
   const API_KEY = import.meta.env.VITE_API_KEY;
-
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
@@ -70,10 +63,8 @@ function App() {
   }, [darkMode]);
 
   useEffect(() => {
-    if (weather) localStorage.setItem('weather', JSON.stringify(weather));
-    if (forecast) localStorage.setItem('forecast', JSON.stringify(forecast));
     localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
-  }, [weather, forecast, recentSearches]);
+  }, [recentSearches]);
 
   const fetchWeatherData = async (cityName: string) => {
     setLoading(true);
@@ -92,7 +83,6 @@ function App() {
         const searches = [cityName, ...prev.filter(s => s !== cityName)].slice(0, 20);
         return searches;
       });
-
     } catch (err) {
       setError('City not found or API error occurred');
       setWeather(null);
