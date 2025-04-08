@@ -184,7 +184,7 @@ function App() {
           )}
 
           {weather && (
-            <div className={`rounded-lg p-6 mb-6 transition-colors ${darkMode ? 'bg-gray-700' : 'bg-blue-50'}`}>
+            <div className={`rounded-lg p-6 mb-6 transition-colors ${darkMode ? 'bg-gray-700' : 'bg-blue-100'}`}>
               <div className="flex justify-between items-center mb-4">
                 <h2 className={`text-2xl font-semibold flex items-center gap-2 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
                   <Building2 className={darkMode ? 'text-blue-400' : 'text-blue-500'} size={24} />
@@ -257,7 +257,7 @@ function App() {
 
           {/* 5-Day Forecast */}
           {forecast && (
-            <div className={`rounded-lg p-6 transition-colors ${darkMode ? 'bg-gray-700' : 'bg-blue-50'}`}>
+            <div className={`rounded-lg p-6 transition-colors ${darkMode ? 'bg-gray-700' : 'bg-blue-100'}`}>
               <h3 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
                 <BarChart2 className={darkMode ? 'text-blue-400' : 'text-blue-500'} size={20} />
                 5-Day Forecast
@@ -306,7 +306,7 @@ function App() {
                       }}
                       className={`px-3 py-1 rounded-full transition-colors ${darkMode
                         ? 'bg-gray-700 text-gray-200 hover:bg-gray-600'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                         }`}
                     >
                       {search}
