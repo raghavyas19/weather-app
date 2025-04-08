@@ -2,7 +2,7 @@
 
 A beautiful and responsive weather dashboard built with React, TypeScript, and Tailwind CSS. Get real-time weather information and 5-day forecasts for any city worldwide.
 
-[Live Demo Here🚀](https://weather-app-raghavyas19.vercel.app/)
+🚀[Live Demo Here](https://weather-app-raghavyas19.vercel.app/)
 
 ## ✨ Features
 
@@ -37,7 +37,7 @@ Switch between beautifully designed dark and light themes for comfortable viewin
 1. Clone the repository:
 ```bash
 git clone https://github.com/raghavyas19/weather-app.git
-cd weather-dashboard
+cd weather-app
 ```
 
 2. Install dependencies:
@@ -47,7 +47,7 @@ npm install
 
 3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
 ```env
-API_KEY=your_api_key_here
+VITE_API_KEY=your_api_key_here
 ```
 
 4. Start the development server:
