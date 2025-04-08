@@ -2,7 +2,7 @@
 
 A beautiful and responsive weather dashboard built with React, TypeScript, and Tailwind CSS. Get real-time weather information and 5-day forecasts for any city worldwide.
 
-![Live Demo Here🚀](https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&q=80&w=1200&h=400)
+[Live Demo Here🚀](https://weather-app-raghavyas19.vercel.app/)
 
 ## ✨ Features
 
